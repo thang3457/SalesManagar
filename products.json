@@ -1,0 +1,8 @@
+[
+    {"id": "SP01", "name": "Pepsi", "idCategory": "Water", "priceInput": 9000, "priceOutput": ""},
+    {"id": "SP02", "name": "Coca", "idCategory": "Water", "priceInput": 8500, "priceOutput": ""},
+    {"id": "SP03", "name": "Trà xanh C2", "idCategory": "Water", "priceInput": 7500, "priceOutput":""},
+    {"id": "SP04", "name": "Snack Khoai tây", "idCategory": "Food", "priceInput": 5000, "priceOutput": ""},
+    {"id": "SP05", "name": "Bánh Tráng", "idCategory": "Food", "priceInput": 6000, "priceOutput": ""}
+  ]
+  

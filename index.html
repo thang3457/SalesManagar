@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manager</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+  </head>
+  <body>
+    <div id="header">
+      <h1>My Sales App</h1>
+    </div>
+    <div id="wrapper">
+      <div id="sidebar">
+        <button class="icon open-modal-btn">+</button>
+
+        <ul>
+          <li>
+
+            <input
+              id="warehouseId"
+              placeholder="Enter the warehouse receipt code"
+            />
+            <button
+            class="button"
+
+              id="enterButton"
+              class="customButton"
+              onclick="enterWarehouse()"
+            >
+              Enter
+            </button>
+          </li>
+          <li>
+            <button class="button" onclick="toggleProductList()">Product</button>
+          </li>
+          <li>
+            <button class="button" onclick="hideShowfeature2()">Receipt</button>
+          </li>
+          <li>
+            <button class="button"  onclick="hideShowfeature4()">List by entry date</button>
+          </li>
+          <li>
+            <button class="button"  onclick="hideShowfeature5()">
+              See Warehouse Receipt
+            </button>
+          </li>
+          
+        </ul>
+      </div>
+      <div  id="myModal" class="modal">
+        <div class="modal-content">
+          <button class="close-modal-btn">Close Modal</button>
+
+          <div>
+            <label>IdReceipt:</label>
+            <input type="text" name="idReceipt" />
+          </div>
+          <div>
+            <label>Username:</label>
+            <input type="text" name="username" />
+          </div>
+          <div>
+            <label>Product:</label>
+            <select id="productId"></select>
+          </div>
+          <div>
+            <label>Quantity:</label>
+            <input type="number" name="quantity" />
+          </div>
+          <button onclick="submitReceipt()">Create</button>
+
+          <!-- Nút để đóng modal -->
+        </div>
+      </div>
+
+      <div id="content">
+        <h1>Sales Manager</h1>
+        <div>
+          <!-- // <label for="username">CreatedAt:</label> -->
+          <div class="priceUpdate">
+            <label>ID Product</label>
+            <input id="updateProductId" />
+            <label>Price Update</label>
+            <input id="updateProductPrice" />
+            <button onclick="updateProductPrices()">Update</button>
+        </div>
+        </div>
+
+        <div id="workfirst">
+          <table id="list">
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>PriceInput</th>
+              <th>PriceOutput</th>
+            </tr>
+          </table>
+        </div>
+
+        <div id="tableSecond">
+          <table id="receiptList">
+            <tr>
+              <th>Id</th>
+              <th>UserName</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>CreatedAt</th>
+            </tr>
+          </table>
+          <button onclick="hideShowfeature3()">ReceiptDetail</button>
+        </div>
+
+        <div id="tabeThird">
+          <table id="receiptDetailList">
+            <tr>
+              <th>Id</th>
+              <th>IdReceipt</th>
+              <th>IdProduct</th>
+              <th>Name</th>
+              <th>IdCategory</th>
+              <th>PriceInput</th>
+              <th>PriceOutput</th>
+              <th>Quantity</th>
+            </tr>
+          </table>
+        </div>
+
+        <div id="tableFourth">
+          <table id="itemListByDateTable">
+            <tr>
+              <th>Id Product</th>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>CreatedAt</th>
+            </tr>
+          </table>
+        </div>
+
+        <div id="tableFifth">
+          <table id="warehouseDetailList">
+            <tr>
+              <th>IdReceipt</th>
+              <th>IdProduct</th>
+              <th>Name</th>
+              <th>IdCategory</th>
+              <th>PriceInput</th>
+              <th>PriceOutput</th>
+              <th>Quantity</th>
+              <th>CreatedAt</th>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="main1.js"></script>
+  </body>
+</html>
